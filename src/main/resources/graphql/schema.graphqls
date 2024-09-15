@@ -1,0 +1,24 @@
+type Query {
+    findFlights(
+        startDate: String!
+        endDate: String!
+        origin: String
+        destination: String
+        baggageType: String
+        classType: String
+        maxPassengers: Int
+        maxPrice: Float
+    ): [Flight]
+}
+
+type Flight {
+    id: ID
+    origin: String
+    destination: String
+    date: String
+    baggageType: String
+    classType: String
+    price: Float
+    availableSeats: Int
+}
+
